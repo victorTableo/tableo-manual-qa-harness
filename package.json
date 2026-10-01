@@ -1,0 +1,25 @@
+{
+  "name": "tableo-manual-qa-harness",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Manual QA harness for Tableo: the Playwright toolkit and /qa workflow Claude Code uses to test a ticket in a real browser and report what passed, failed, and could not be tested.",
+  "type": "module",
+  "scripts": {
+    "qa": "playwright test --reporter=dot",
+    "probe": "node scripts/probe.ts",
+    "crawl": "node scripts/crawl.ts",
+    "env:check": "node scripts/env-check.ts",
+    "memberships": "node scripts/discover-memberships.ts",
+    "browser:stop": "node scripts/browser-server.ts --stop",
+    "totp:decode": "node scripts/decode-ga-export.ts",
+    "selfcheck": "playwright test tests/selfcheck.spec.ts --reporter=dot",
+    "typecheck": "tsc --noEmit",
+    "test": "playwright test"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.63.0",
+    "@types/node": "^24.19.0",
+    "dotenv": "18.0.5",
+    "typescript": "5.9.3"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm run qa:*)",
+      "Bash(npm run probe:*)",
+      "Bash(npm run crawl:*)",
+      "Bash(npm run memberships:*)",
+      "Bash(npm run env:check:*)",
+      "Bash(npm run browser:stop)",
+      "Bash(npm run typecheck)",
+      "Bash(npm run selfcheck)"
+    ]
+  }
+}

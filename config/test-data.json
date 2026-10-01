@@ -1,0 +1,18 @@
+{
+  "guests": ["QA Glory", "Glory QA", "Glory Test", "Glory Testing"],
+  "email": {
+    "mailbox": "glory",
+    "domain": "tableo.com",
+    "tags": ["test", "guest", "freemiumtest", "test1"]
+  },
+  "phones": ["+35696961234", "+35696968764"],
+  "randomPhone": "+3569696####",
+  "stripeCards": {
+    "success": { "number": "4242424242424242", "note": "Visa, payment succeeds" },
+    "decline": { "number": "4000000000000002", "note": "generic decline" },
+    "insufficient_funds": { "number": "4000000000009995", "note": "declined: insufficient funds" },
+    "3ds_required": { "number": "4000002500003155", "note": "asks for 3D Secure authentication" }
+  },
+  "card": { "expiry": "12/34", "cvc": "123", "postcode": "10001" },
+  "prohibitedNetworkValues": []
+}

@@ -1,0 +1,1151 @@
+{
+  "environment": "victor",
+  "crawledAt": "2026-10-01T18:23:56.746Z",
+  "sources": [
+    "Gold (TBL Ben's Bistro)",
+    "Freemium (McDonald's)",
+    "Silver (All Day)"
+  ],
+  "structureFrom": "Gold",
+  "gaps": [
+    "Organise, Grow, Expand (the login is Administrator in no restaurant on these plans)"
+  ],
+  "differs": [
+    "Sell products & menus online (`/admin/restaurants/<slug>/services-hub/products`): pricing excludes it on Freemium, the page is open",
+    "Event management (`/admin/restaurants/<slug>/services-hub/events`): pricing excludes it on Freemium, the page is open"
+  ],
+  "pages": {
+    "/admin/dashboard": {
+      "path": "/admin/dashboard",
+      "area": "Bookings & Service",
+      "checked": "2026-10-01",
+      "h1": "",
+      "under": "",
+      "headings": [
+        "H2 \"<date>\"",
+        "H4 \"Covers by Service Hour\"",
+        "H4 \"Latest Reviews\"",
+        "H4 \"Today's Overview\"",
+        "H4 \"Week Overview\""
+      ],
+      "tables": [],
+      "controls": [
+        "`button:has-text(\"\")` button[button] \"prev\"",
+        "`button:has-text(\"\")` button[button] \"next\"",
+        "`button:has-text(\"Guest list\")` button[button] \"Guest list\"",
+        "`#dropdownMenuButton` button[button] \"Stop Bookings\"",
+        "`#dashboardPrintBookingsBtn` button[button]"
+      ],
+      "tabs": [],
+      "access": {
+        "Gold": "open",
+        "Freemium": "open",
+        "Silver": "open"
+      }
+    },
+    "/admin/marketing": {
+      "path": "/admin/marketing",
+      "area": "Guest Marketing New",
+      "checked": "2026-10-01",
+      "h1": "Guest Marketing",
+      "under": "",
+      "headings": [
+        "H1 \"Guest Marketing\"",
+        "H2 \"Email performance\"",
+        "H2 \"Audience growth\"",
+        "H2 \"Email volume\"",
+        "H3 \"Send your first campaign\"",
+        "H2 \"Automation performance\"",
+        "H3 \"Birthday\"",
+        "H3 \"We Miss You\"",
+        "H3 \"Anniversary\"",
+        "H2 \"Email quota\"",
+        "H2 \"Next best actions\""
+      ],
+      "tables": [],
+      "controls": [
+        "`button:has-text(\"Toggle sidebar\")` button[button] \"Toggle sidebar\"",
+        "`button:has-text(\"\")` button[button] \"Open tracking is approximate — Apple Mail Privacy Protection\""
+      ],
+      "tabs": [],
+      "access": {
+        "Gold": "open",
+        "Freemium": "open",
+        "Silver": "open"
+      }
+    },
+    "/admin/restaurants/<slug>/bookings/diary": {
+      "path": "/admin/restaurants/<slug>/bookings/diary",
+      "area": "Diary",
+      "checked": "2026-10-01",
+      "h1": "",
+      "under": "",
+      "headings": [
+        "H2 \"<date>\""
+      ],
+      "tables": [
+        [
+          "Table",
+          "00:00",
+          "01:00",
+          "02:00",
+          "03:00",
+          "04:00",
+          "05:00",
+          "06:00",
+          "07:00",
+          "08:00",
+          "09:00",
+          "10:00",
+          "11:00",
+          "12:00",
+          "13:00",
+          "14:00",
+          "15:00",
+          "16:00",
+          "17:00",
+          "18:00",
+          "19:00",
+          "20:00",
+          "21:00",
+          "22:00",
+          "23:00"
+        ],
+        [
+          "Table"
+        ],
+        [
+          "00:00",
+          "01:00",
+          "02:00",
+          "03:00",
+          "04:00",
+          "05:00",
+          "06:00",
+          "07:00",
+          "08:00",
+          "09:00",
+          "10:00",
+          "11:00",
+          "12:00",
+          "13:00",
+          "14:00",
+          "15:00",
+          "16:00",
+          "17:00",
+          "18:00",
+          "19:00",
+          "20:00",
+          "21:00",
+          "22:00",
+          "23:00"
+        ],
+        []
+      ],
+      "controls": [
+        "`button:has-text(\"Stats\")` button[button] \"Stats\"",
+        "`button:has-text(\"Day view\")` button[button] \"Day view\"",
+        "`button:has-text(\"Legend\")` button[button] \"Legend\"",
+        "`#dropdownMenuButton` button[button] \"Stop Bookings\"",
+        "`button:has-text(\"Guest list\")` button[button] \"Guest list\"",
+        "`button:has-text(\"Notes\")` button[button] \"Notes\"",
+        "`button:has-text(\"Calendar\")` button[button] \"Calendar\"",
+        "`button:has-text(\"Today\")` button[button] \"Today\"",
+        "`button:has-text(\"\")` button[button] \"prev\"",
+        "`button:has-text(\"\")` button[button] \"next\"",
+        "`button:has-text(\"\")` button[button] \"Fullscreen\"",
+        "`#bottom-sheet-close` button[submit]",
+        "`#mobile-closeoff-matrix` button[submit] \"Close off dining areas\"",
+        "`#mobile-closeoff-hours` button[submit] \"Close off service hours\""
+      ],
+      "tabs": [],
+      "access": {
+        "Gold": "open",
+        "Freemium": "open",
+        "Silver": "open"
+      }
+    },
+    "/admin/restaurants/<slug>/bookings": {
+      "path": "/admin/restaurants/<slug>/bookings",
+      "area": "Bookings",
+      "checked": "2026-10-01",
+      "h1": "Bookings",
+      "under": "Bookings from <date> to <date>",
+      "headings": [
+        "H1 \"Bookings\""
+      ],
+      "tables": [
+        [
+          "Booking Details",
+          "Created On",
+          "Booked for",
+          "Status",
+          "Payment Status",
+          "Table"
+        ]
+      ],
+      "controls": [
+        "`input[name=\"search\"]` input[text] \"Search for bookings\"",
+        "`#filter-dropdown-filterdateby-trigger` button[button] \"Booking for date\"",
+        "`#filter-dropdown-channel-trigger` button[button] \"All channels\"",
+        "`#filter-dropdown-status-trigger` button[button] \"All statuses\"",
+        "`#filter-dropdown-payment-status-trigger` button[button] \"All payment statuses\"",
+        "`button:has-text(\"Search\")` button[submit] \"Search\""
+      ],
+      "tabs": [],
+      "access": {
+        "Gold": "open",
+        "Freemium": "open",
+        "Silver": "open"
+      }
+    },
+    "/admin/restaurants/<slug>/patrons": {
+      "path": "/admin/restaurants/<slug>/patrons",
+      "area": "Guests",
+      "checked": "2026-10-01",
+      "h1": "Guests",
+      "under": "Everyone who has booked or been added to this restaurant.",
+      "headings": [
+        "H1 \"Guests\""
+      ],
+      "tables": [
+        [
+          "Name",
+          "Contact",
+          "Dates",
+          "About",
+          "Comments",
+          "Channel",
+          "Actions"
+        ]
+      ],
+      "controls": [
+        "`button:has-text(\"Toggle sidebar\")` button[button] \"Toggle sidebar\"",
+        "`button:has-text(\"\")` button[button] \"Dismiss\"",
+        "`button:has-text(\"Export\")` button[button] \"Export\"",
+        "`button:has-text(\"Create segment\")` button[button] \"Create segment\"",
+        "`input:has-text(\"\")` input[search] \"Search by name, email or phone\"",
+        "`button:has-text(\"« Previous\")` button[button] \"« Previous\"",
+        "`button:has-text(\"1\")` button[button] \"1\"",
+        "`button:has-text(\"2\")` button[button] \"2\"",
+        "`button:has-text(\"3\")` button[button] \"3\"",
+        "`button:has-text(\"4\")` button[button] \"4\"",
+        "`button:has-text(\"5\")` button[button] \"5\"",
+        "`button:has-text(\"6\")` button[button] \"6\"",
+        "`button:has-text(\"7\")` button[button] \"7\"",
+        "`button:has-text(\"8\")` button[button] \"8\"",
+        "`button:has-text(\"9\")` button[button] \"9\"",
+        "`button:has-text(\"10\")` button[button] \"10\"",
+        "`button:has-text(\"...\")` button[button] \"...\"",
+        "`button:has-text(\"46\")` button[button] \"46\"",
+        "`button:has-text(\"47\")` button[button] \"47\"",
+        "`button:has-text(\"Next »\")` button[button] \"Next »\""
+      ],
+      "tabs": [],
+      "access": {
+        "Gold": "open",
+        "Freemium": "open",
+        "Silver": "open"
+      }
+    },
+    "/admin/restaurants/<slug>/reviews": {
+      "path": "/admin/restaurants/<slug>/reviews",
+      "area": "Reviews",
+      "checked": "2026-10-01",
+      "h1": "",
+      "under": "",
+      "headings": [],
+      "tables": [
+        [
+          "Name",
+          "Booking Reference",
+          "Comment",
+          "Rating",
+          "Date",
+          "Show / Hide"
+        ]
+      ],
+      "controls": [
+        "`#widget-review-toggle` input[checkbox]",
+        "`#copy-reviews-iframe` button[button] \"Copy\""
+      ],
+      "tabs": [],
+      "access": {
+        "Gold": "open",
+        "Freemium": "open",
+        "Silver": "open"
+      }
+    },
+    "/admin/restaurants/<slug>/reports/bookings-report": {
+      "path": "/admin/restaurants/<slug>/reports/bookings-report",
+      "area": "Booking Insights",
+      "checked": "2026-10-01",
+      "h1": "Booking Insights",
+      "under": "",
+      "headings": [
+        "H1 \"Booking Insights\"",
+        "H2 \"Bookings and Covers Overview\"",
+        "H4 \"Showing data from <date> to <date>\"",
+        "H3 \"Confirmed Bookings\"",
+        "H3 \"Confirmed Covers\"",
+        "H3 \"Cancelled Bookings\"",
+        "H3 \"No Shows\"",
+        "H3 \"Pending & Rejected\"",
+        "H2 \"Booking Details\""
+      ],
+      "tables": [
+        [
+          "Channel",
+          "Total Bookings",
+          "Total Covers",
+          "Cancelled Covers",
+          "No Show Covers",
+          "Billable Covers",
+          "Google"
+        ],
+        [
+          "Rank",
+          "Service Hour",
+          "Total Covers in Service Hour",
+          "Busiest Time",
+          "Dinner (Tuesday, Thursday, Friday, Saturday, Sunday)"
+        ]
+      ],
+      "controls": [
+        "`#resetI6s4XER1f8` button[submit] \"Reset Date\"",
+        "`#channel` select[select-one] \"Channel\"",
+        "`button:has-text(\"Filter\")` button[submit] \"Filter\"",
+        "`#covers-btn` button[submit] \"By Covers\"",
+        "`#bookings-btn` button[submit] \"By Bookings\"",
+        "`div:has-text(\"No Show\")` div \"No Show\"",
+        "`div:has-text(\"Cancelled\")` div \"Cancelled\"",
+        "`div:has-text(\"Confirmed\")` div \"Confirmed\"",
+        "`div:has-text(\"Phone\")` div \"Phone\""
+      ],
+      "tabs": [],
+      "access": {
+        "Gold": "open",
+        "Freemium": "403 (Upgrade Required) 🔒",
+        "Silver": "open"
+      }
+    },
+    "/admin/restaurants/<slug>/bookings/calendar": {
+      "path": "/admin/restaurants/<slug>/bookings/calendar",
+      "area": "Calendar Report",
+      "checked": "2026-10-01",
+      "h1": "",
+      "under": "",
+      "headings": [
+        "H2 \"October 2026\""
+      ],
+      "tables": [
+        [
+          "Mon",
+          "Tue",
+          "Wed",
+          "Thu",
+          "Fri",
+          "Sat",
+          "Sun"
+        ],
+        [
+          "Mon",
+          "Tue",
+          "Wed",
+          "Thu",
+          "Fri",
+          "Sat",
+          "Sun"
+        ],
+        []
+      ],
+      "controls": [
+        "`#cal-cust-prev` button[submit] \"Previous\"",
+        "`#cal-cust-today` button[submit] \"Today\"",
+        "`#cal-cust-next` button[submit] \"Next\"",
+        "`button:has-text(\"Day view\")` button[button] \"Day view\"",
+        "`button:has-text(\"Stats\")` button[button] \"Stats\"",
+        "`button:has-text(\"Fullscreen\")` button[button] \"Fullscreen\""
+      ],
+      "tabs": [],
+      "access": {
+        "Gold": "open",
+        "Freemium": "403 (Upgrade Required) 🔒",
+        "Silver": "open"
+      }
+    },
+    "/admin/restaurants/<slug>/reports/revenue-report": {
+      "path": "/admin/restaurants/<slug>/reports/revenue-report",
+      "area": "Revenue Report",
+      "checked": "2026-10-01",
+      "h1": "Revenue Report",
+      "under": "",
+      "headings": [
+        "H1 \"Revenue Report\"",
+        "H3 \"Total Net Revenue\"",
+        "H2 \"Booking Payments\"",
+        "H4 \"Showing data from 1st January 2026 to 31st December 2026\"",
+        "H3 \"Net Deposits Revenue\"",
+        "H3 \"No Show Fees\"",
+        "H3 \"Refunds\"",
+        "H2 \"Products\"",
+        "H4 \"Showing data from 1st January 2026 to 31st December 2026\""
+      ],
+      "tables": [],
+      "controls": [
+        "`#resett3xGW895c3` button[submit] \"Reset Date\"",
+        "`button:has-text(\"Filter\")` button[submit] \"Filter\"",
+        "`div:has-text(\"Booking Deposits Collecte\")` div \"Booking Deposits Collected\"",
+        "`div:has-text(\"Event Deposits Collected\")` div \"Event Deposits Collected\"",
+        "`div:has-text(\"No-Show Fees Collected\")` div \"No-Show Fees Collected\"",
+        "`div:has-text(\"Used\")` div \"Used\"",
+        "`div:has-text(\"Unconsumed\")` div \"Unconsumed\""
+      ],
+      "tabs": [],
+      "access": {
+        "Gold": "open",
+        "Freemium": "403 (Upgrade Required) 🔒",
+        "Silver": "open"
+      }
+    },
+    "/admin/restaurants/<slug>/reports/frequent-patrons-report": {
+      "path": "/admin/restaurants/<slug>/reports/frequent-patrons-report",
+      "area": "Guest Frequency",
+      "checked": "2026-10-01",
+      "h1": "Guest Frequency",
+      "under": "",
+      "headings": [
+        "H1 \"Guest Frequency\"",
+        "H3 \"Top 50 Guests by Confirmed Bookings\"",
+        "H4 \"Showing data from <date> to <date>\""
+      ],
+      "tables": [
+        [
+          "Name",
+          "Total Bookings",
+          "Total Covers",
+          "Last Visit",
+          "Avg. POS/Booking",
+          "Total POS Spent",
+          "All Time Bookings",
+          "All Time Covers",
+          "All Time Cancellations",
+          "All Time No Shows"
+        ]
+      ],
+      "controls": [
+        "`button:has-text(\"Filter\")` button[submit] \"Filter\"",
+        "`#dropdownDefaultButton` button[button] \"Export\""
+      ],
+      "tabs": [],
+      "access": {
+        "Gold": "open",
+        "Freemium": "403 (Upgrade Required) 🔒",
+        "Silver": "open"
+      }
+    },
+    "/admin/payments/report": {
+      "path": "/admin/payments/report",
+      "area": "Payments Report",
+      "checked": "2026-10-01",
+      "h1": "",
+      "under": "",
+      "headings": [],
+      "tables": [
+        [
+          "ID",
+          "Restaurant",
+          "Description",
+          "Booking Reference",
+          "Booked For",
+          "Charged On",
+          "Fee !",
+          "Total"
+        ]
+      ],
+      "controls": [
+        "`#resetyDD9pkU8AK` button[submit] \"Reset\"",
+        "`button:has-text(\"Filter\")` button[submit] \"Filter\"",
+        "`button[name=\"export\"]` button[submit] \"Export to CSV\""
+      ],
+      "tabs": [],
+      "access": {
+        "Gold": "open",
+        "Freemium": "open (not in sidebar)",
+        "Silver": "open (not in sidebar)"
+      }
+    },
+    "/admin/restaurants/<slug>/reports/concierge-bookings-report": {
+      "path": "/admin/restaurants/<slug>/reports/concierge-bookings-report",
+      "area": "Concierge Report",
+      "checked": "2026-10-01",
+      "h1": "",
+      "under": "",
+      "headings": [
+        "H4 \"Showing Results from <date> to Saturda\"",
+        "H2 \"Test Concierge Bookings\"",
+        "H2 \"<guest> Bookings\""
+      ],
+      "tables": [
+        [
+          "Bookings",
+          "Covers"
+        ],
+        [
+          "Bookings",
+          "Covers"
+        ]
+      ],
+      "controls": [
+        "`#reset92rDrhYnS2` button[submit] \"Reset\"",
+        "`button:has-text(\"Filter\")` button[submit] \"Filter\""
+      ],
+      "tabs": [],
+      "access": {
+        "Gold": "open",
+        "Freemium": "403 (Upgrade Required) 🔒",
+        "Silver": "403 🔒"
+      }
+    },
+    "/admin/restaurants/<slug>/concierges": {
+      "path": "/admin/restaurants/<slug>/concierges",
+      "area": "Concierge",
+      "checked": "2026-10-01",
+      "h1": "",
+      "under": "",
+      "headings": [
+        "H3 \"Concierge\""
+      ],
+      "tables": [
+        [
+          "Details",
+          "Description",
+          "Bookings",
+          "Referral Link"
+        ]
+      ],
+      "controls": [],
+      "tabs": [],
+      "access": {
+        "Gold": "open",
+        "Freemium": "403 (no permission) (not in sidebar)",
+        "Silver": "403 (no permission) (not in sidebar)"
+      }
+    },
+    "/admin/restaurants/<slug>/restaurant-addons": {
+      "path": "/admin/restaurants/<slug>/restaurant-addons",
+      "area": "Marketplace",
+      "checked": "2026-10-01",
+      "h1": "",
+      "under": "",
+      "headings": [],
+      "tables": [],
+      "controls": [
+        "`button:has-text(\"Get now\")` button[submit] \"Get now\"",
+        "`#addon_1` input[checkbox]",
+        "`#addon_13` input[checkbox]",
+        "`#addon_15` input[checkbox]",
+        "`#addon_9` input[checkbox]",
+        "`#addon_2` input[checkbox]",
+        "`#addon_3` input[checkbox]",
+        "`#addon_4` input[checkbox]",
+        "`#addon_5` input[checkbox]",
+        "`#addon_10` input[checkbox]",
+        "`#addon_14` input[checkbox]",
+        "`#addon_26` input[checkbox]",
+        "`#addon_27` input[checkbox]",
+        "`#addon_29` input[checkbox]",
+        "`#addon_31` input[checkbox]",
+        "`#addon_32` input[checkbox]",
+        "`#addon_28` input[checkbox]",
+        "`#addon_30` input[checkbox]"
+      ],
+      "tabs": [],
+      "access": {
+        "Gold": "open",
+        "Freemium": "open",
+        "Silver": "open"
+      },
+      "addons": {
+        "Gold": [
+          "Products (addon_1): on",
+          "Online Payments & Cancellation Policy (addon_13): on",
+          "Gift Vouchers (addon_15): on",
+          "AIMA - AI Messaging Assistant for META (addon_9): off",
+          "Concierge & Affiliate System (addon_2): £9.99/month, on",
+          "Blacklist (addon_3): on",
+          "Booking Notifications (addon_4): on",
+          "Waiting List (addon_5): off",
+          "Restaurant Chain & Cross-Selling (addon_10): on",
+          "Booking Reconfirmation Add-on New (addon_14): off",
+          "WhatsApp Alerts for Managers (addon_26): off",
+          "Marketing & CRM (addon_27): on",
+          "Guest Notifications New (addon_29): on",
+          "Email Branding (addon_31): off",
+          "market-place.Detailed Business Intelligence Reports (addon_32): included in plan, toggle disabled",
+          "POS Connect (addon_28): off",
+          "Syrve (addon_30): off"
+        ],
+        "Freemium": [
+          "Products (addon_1): on",
+          "Online Payments & Cancellation Policy (addon_13): toggle disabled",
+          "Gift Vouchers (addon_15): toggle disabled",
+          "AIMA - AI Messaging Assistant for META (addon_9): off",
+          "Concierge & Affiliate System (addon_2): £9.99/month, toggle disabled",
+          "Blacklist (addon_3): toggle disabled",
+          "Booking Notifications (addon_4): off",
+          "Waiting List (addon_5): on",
+          "Restaurant Chain & Cross-Selling (addon_10): toggle disabled",
+          "Booking Reconfirmation Add-on New (addon_14): toggle disabled",
+          "WhatsApp Alerts for Managers (addon_26): toggle disabled",
+          "Marketing & CRM (addon_27): off",
+          "Guest Notifications New (addon_29): toggle disabled",
+          "Email Branding (addon_31): toggle disabled",
+          "market-place.Detailed Business Intelligence Reports (addon_32): £9.99/month, toggle disabled",
+          "POS Connect (addon_28): toggle disabled",
+          "Syrve (addon_30): toggle disabled"
+        ],
+        "Silver": [
+          "Products (addon_1): off",
+          "Online Payments & Cancellation Policy (addon_13): on",
+          "Gift Vouchers (addon_15): off",
+          "AIMA - AI Messaging Assistant for META (addon_9): off",
+          "Concierge & Affiliate System (addon_2): £9.99/month, off",
+          "Blacklist (addon_3): on",
+          "Booking Notifications (addon_4): on",
+          "Waiting List (addon_5): on",
+          "Restaurant Chain & Cross-Selling (addon_10): on",
+          "Booking Reconfirmation Add-on New (addon_14): on",
+          "WhatsApp Alerts for Managers (addon_26): off",
+          "Marketing & CRM (addon_27): off",
+          "Guest Notifications New (addon_29): on",
+          "Email Branding (addon_31): toggle disabled",
+          "market-place.Detailed Business Intelligence Reports (addon_32): included in plan, toggle disabled",
+          "POS Connect (addon_28): off",
+          "Syrve (addon_30): off"
+        ]
+      }
+    },
+    "/admin/restaurants/<slug>/vouchers": {
+      "path": "/admin/restaurants/<slug>/vouchers",
+      "area": "Vouchers",
+      "checked": "2026-10-01",
+      "h1": "Vouchers",
+      "under": "Manage and redeem your restaurant vouchers. Voucher setup & ",
+      "headings": [
+        "H1 \"Vouchers\"",
+        "H2 \"Redeem a voucher\"",
+        "H3 \"Unredeemed Vouchers\"",
+        "H3 \"Redeemed Vouchers\""
+      ],
+      "tables": [
+        [
+          "Batch Code",
+          "Ref Code",
+          "Value",
+          "Receiver",
+          "Sender",
+          "Used On"
+        ]
+      ],
+      "controls": [
+        "`#products-tab-btn` button[button] \"Voucher types\"",
+        "`#voucher_reference_code` input[text] \"ABC-123\"",
+        "`button:has-text(\"Redeem voucher\")` button[submit] \"Redeem voucher\"",
+        "`button:has-text(\"Vouchers consumed\")` button[button] \"Vouchers consumed\"",
+        "`button:has-text(\"Vouchers unconsumed\")` button[button] \"Vouchers unconsumed\""
+      ],
+      "tabs": [],
+      "access": {
+        "Gold": "open",
+        "Freemium": "open",
+        "Silver": "open"
+      }
+    },
+    "/admin/restaurants/<slug>/notifications": {
+      "path": "/admin/restaurants/<slug>/notifications",
+      "area": "Notifications",
+      "checked": "2026-10-01",
+      "h1": "Booking Activity Notifications",
+      "under": "Stay up to date with all booking activity. View created, upd",
+      "headings": [
+        "H1 \"Booking Activity Notifications\"",
+        "H4 \"Stay up to date with all booking activity. View created, upd\""
+      ],
+      "tables": [
+        [
+          "Title",
+          "Booking Details",
+          "Date"
+        ]
+      ],
+      "controls": [],
+      "tabs": [],
+      "access": {
+        "Gold": "open",
+        "Freemium": "open",
+        "Silver": "open"
+      }
+    },
+    "/admin/restaurants/<slug>/blacklists": {
+      "path": "/admin/restaurants/<slug>/blacklists",
+      "area": "Blacklist",
+      "checked": "2026-10-01",
+      "h1": "",
+      "under": "",
+      "headings": [
+        "H4 \"Block specific guests from making reservations by adding the\""
+      ],
+      "tables": [
+        [
+          "Title",
+          "Email",
+          "Mobile",
+          "Edit"
+        ]
+      ],
+      "controls": [
+        "`a:has-text(\"Add New\")` a \"Add New\""
+      ],
+      "tabs": [],
+      "access": {
+        "Gold": "open",
+        "Freemium": "open (not in sidebar)",
+        "Silver": "open"
+      }
+    },
+    "/admin/restaurants/<slug>/services-hub/regular-hours": {
+      "path": "/admin/restaurants/<slug>/services-hub/regular-hours",
+      "area": "Regular Hours",
+      "checked": "2026-10-01",
+      "h1": "Services Hub",
+      "under": "",
+      "headings": [
+        "H1 \"Services Hub\""
+      ],
+      "tables": [],
+      "controls": [
+        "`div:has-text(\"LUNCH 10:00 – 23:59 Edit\")` div \"LUNCH 10:00 – 23:59 Edit\"",
+        "`button:has-text(\"\")` button[button]",
+        "`button:has-text(\"Add service\")` button[button] \"Add service\"",
+        "`button:has-text(\"Duplicate\")` button[button] \"Duplicate\"",
+        "`div:has-text(\"LUNCH 12:00 – 15:00 Edit\")` div \"LUNCH 12:00 – 15:00 Edit\"",
+        "`div:has-text(\"DINNER 18:00 – 23:00 Edit\")` div \"DINNER 18:00 – 23:00 Edit\"",
+        "`div:has-text(\"BREAKFAST 10:00 – 12:00 E\")` div \"BREAKFAST 10:00 – 12:00 Edit\"",
+        "`div:has-text(\"LUNCH 13:00 – 23:59 Edit\")` div \"LUNCH 13:00 – 23:59 Edit\""
+      ],
+      "tabs": [],
+      "access": {
+        "Gold": "open",
+        "Freemium": "open",
+        "Silver": "open"
+      }
+    },
+    "/admin/restaurants/<slug>/services-hub/seasonal-hours": {
+      "path": "/admin/restaurants/<slug>/services-hub/seasonal-hours",
+      "area": "Seasonal Hours",
+      "checked": "2026-10-01",
+      "h1": "Services Hub",
+      "under": "",
+      "headings": [
+        "H1 \"Services Hub\"",
+        "H3 \"28th april\"",
+        "H3 \"Test SSH\"",
+        "H3 \"Test hours 3\"",
+        "H3 \"Mothers week 2\"",
+        "H3 \"Post mothers day\"",
+        "H3 \"carn\"",
+        "H3 \"Season\"",
+        "H3 \"ñáñaras\"",
+        "H3 \"Mothers Day week\""
+      ],
+      "tables": [],
+      "controls": [
+        "`button:has-text(\"\")` button[button] \"Archive\"",
+        "`button:has-text(\"ARCHIVED (10)\")` button[button] \"ARCHIVED (10)\""
+      ],
+      "tabs": [],
+      "access": {
+        "Gold": "open",
+        "Freemium": "open",
+        "Silver": "open"
+      }
+    },
+    "/admin/restaurants/<slug>/services-hub/events": {
+      "path": "/admin/restaurants/<slug>/services-hub/events",
+      "h1": "Services Hub",
+      "under": "Events are special occasions with custom hours, deposits, an",
+      "headings": [
+        "H1 \"Services Hub\""
+      ],
+      "tables": [],
+      "controls": [
+        "`button:has-text(\"Toggle sidebar\")` button[button] \"Toggle sidebar\"",
+        "`button:has-text(\"\")` button[button] \"Dismiss\"",
+        "`input:has-text(\"\")` input[text] \"Search events…\"",
+        "`button:has-text(\"Active\")` button[button] \"Active\"",
+        "`button:has-text(\"Create Event\")` button[button] \"Create Event\""
+      ],
+      "area": "Events",
+      "tabs": [],
+      "checked": "2026-10-01",
+      "access": {
+        "Gold": "open",
+        "Freemium": "open",
+        "Silver": "open"
+      }
+    },
+    "/admin/restaurants/<slug>/services-hub/products": {
+      "path": "/admin/restaurants/<slug>/services-hub/products",
+      "area": "Products & Experiences",
+      "checked": "2026-10-01",
+      "h1": "Services Hub",
+      "under": "Products and experiences appear in your booking widget when ",
+      "headings": [
+        "H1 \"Services Hub\""
+      ],
+      "tables": [],
+      "controls": [
+        "`button:has-text(\"Toggle sidebar\")` button[button] \"Toggle sidebar\"",
+        "`button:has-text(\"\")` button[button] \"Dismiss\"",
+        "`input:has-text(\"\")` input[text] \"Search products…\"",
+        "`button:has-text(\"All types\")` button[button] \"All types\"",
+        "`button:has-text(\"Active (7)\")` button[button] \"Active (7)\""
+      ],
+      "tabs": [],
+      "access": {
+        "Gold": "open",
+        "Freemium": "open",
+        "Silver": "403 (no permission) (not in sidebar)"
+      }
+    },
+    "/admin/restaurants/<slug>/edit": {
+      "path": "/admin/restaurants/<slug>/edit",
+      "area": "Account Settings",
+      "checked": "2026-10-01",
+      "h1": "",
+      "under": "",
+      "headings": [
+        "H3 \"Basic Data\""
+      ],
+      "tables": [],
+      "controls": [
+        "`a:has-text(\"Managers (20)\")` a \"Managers (20)\"",
+        "`#widget-toggle-on` input[checkbox]",
+        "`input[name=\"name\"]` input[text]",
+        "`#mobile_number` input[tel] \"Phone Number\"",
+        "`input[name=\"address\"]` input[text]",
+        "`#restaurantUpdateButton` button[button] \"Update\""
+      ],
+      "tabs": [
+        {
+          "label": "Basic Data",
+          "controls": [
+            "`input[name=\"name\"]` input[text]",
+            "`#mobile_number` input[tel] \"Phone Number\"",
+            "`input[name=\"address\"]` input[text]"
+          ]
+        },
+        {
+          "label": "Booking Terms",
+          "controls": []
+        },
+        {
+          "label": "Closed Days",
+          "controls": [
+            "`button:has-text(\"Today\")` button[button] \"Today\"",
+            "`button:has-text(\"\")` button[button] \"prev\"",
+            "`button:has-text(\"\")` button[button] \"next\""
+          ]
+        },
+        {
+          "label": "Messaging Settings",
+          "controls": [
+            "`button:has-text(\"Guest Notifications\")` button[button] \"Guest Notifications\"",
+            "`button:has-text(\"Manager Alerts\")` button[button] \"Manager Alerts\"",
+            "`#guest_notifications_sms_enabled_toggle` input[checkbox]",
+            "`#guest_notifications_whatsapp_enabled_toggle` input[checkbox]",
+            "`#sms_transactional_toggle` input[checkbox]",
+            "`#sms_cancellation_notifications_toggle` input[checkbox]",
+            "`#sms_reminders_toggle` input[checkbox]",
+            "`#sms_review_notifications_toggle` input[checkbox]",
+            "`#sms_pending_payments_toggle` input[checkbox]",
+            "`#review_url` input[url] \"Review URL\"",
+            "`#sms_transactional_sender` input[text] \"SMS Sender Name\"",
+            "`#save-messaging-settings` button[button] \"Save\""
+          ]
+        },
+        {
+          "label": "Booking Settings",
+          "controls": [
+            "`#allow_kids` input[checkbox] \"Show children option Show the children field on the booking \"",
+            "`#allow_on_day_bookings` input[checkbox] \"Allow same day bookings Let guests make reservations for tod\"",
+            "`select[name=\"default_booking_duration_hours\"]` select[select-one]",
+            "`select[name=\"default_booking_time_step_minutes\"]` select[select-one]",
+            "`input[name=\"widget_max_children_selection\"]` input[number]",
+            "`input[name=\"widget_max_adults_selection\"]` input[number]",
+            "`input[name=\"widget_min_children_selection\"]` input[number]",
+            "`input[name=\"widget_min_adults_selection\"]` input[number]",
+            "`input[name=\"widget_booking_minutes_before\"]` input[number]",
+            "`input[name=\"widget_booking_max_days_before\"]` input[number]",
+            "`input[name=\"widget_booking_comment\"]` input[text]",
+            "`input[name=\"max_covers\"]` input[number]",
+            "`input[name=\"contact_email\"]` input[email]",
+            "`#disable_phone_bookings` input[checkbox] \"Disable the \"Please call us\" message in Widget when there is\"",
+            "`#twenty_four_hour_format` input[checkbox] \"Format hour Display times in 24-hour format instead of AM/PM\"",
+            "`#auto_accept_bookings` input[checkbox] \"Auto accept bookings Automatically confirm bookings without \"",
+            "`#auto_accept_google_bookings` input[checkbox] \"Auto accept Google bookings Automatically accept reservation\"",
+            "`#allowGroupRequests` input[checkbox] \"Allow Group Requests Let guests submit booking requests for \"",
+            "`#enableRoomNumber` input[checkbox] \"Enable room number field Add a room number field to the book\"",
+            "`#enable_company_field` input[checkbox] \"Enable company field Allow guests to enter a company name wh\"",
+            "`#enableCustomField` input[checkbox] \"Enable custom field Add a custom field to collect extra info\"",
+            "`#mandatoryRoomNumber` input[checkbox] \"Make room number field mandatory Require guests to enter a r\"",
+            "`#customFieldLabel` input[text] \"Name of the custom field\"",
+            "`#mandatoryCustomField` input[checkbox] \"Make custom field mandatory Require guests to fill in the cu\""
+          ]
+        },
+        {
+          "label": "Crowd Control",
+          "controls": [
+            "`#crowd_control_max_covers` input[number] \"Max covers\"",
+            "`#crowd_control_time_minutes` input[number] \"Per Minutes\""
+          ]
+        },
+        {
+          "label": "Online Payment Settings",
+          "controls": [
+            "`button:has-text(\"Stripe (default)\")` button[button] \"Stripe (default)\"",
+            "`button:has-text(\"ZruPay\")` button[button] \"ZruPay\"",
+            "`#cb-switch-provider` input[checkbox]",
+            "`button:has-text(\"Disconnect Tableo from St\")` button[button] \"Disconnect Tableo from Stripe\""
+          ]
+        },
+        {
+          "label": "Booking Payment Rules",
+          "controls": [
+            "`input[name=\"settings_payment_bookings_minimum_covers\"]` input[text]",
+            "`input[name=\"settings_payment_bookings_cover_charge_amount\"]` input[text]",
+            "`#bp_payment_bookings_collect_credit_card_type` select[select-one]",
+            "`#payment_bookings_auto_cancel_after` select[select-one]",
+            "`#cancellation_policy_in_hours` input[number]",
+            "`input[name=\"settings_payment_bookings_Monday\"]` input[checkbox] \"Monday\"",
+            "`input[name=\"settings_payment_bookings_Tuesday\"]` input[checkbox] \"Tuesday\"",
+            "`input[name=\"settings_payment_bookings_Wednesday\"]` input[checkbox] \"Wednesday\"",
+            "`input[name=\"settings_payment_bookings_Thursday\"]` input[checkbox] \"Thursday\"",
+            "`input[name=\"settings_payment_bookings_Friday\"]` input[checkbox] \"Friday\"",
+            "`input[name=\"settings_payment_bookings_Saturday\"]` input[checkbox] \"Saturday\"",
+            "`input[name=\"settings_payment_bookings_Sunday\"]` input[checkbox] \"Sunday\"",
+            "`#bp_dining_areas_not_shown` select[select-multiple]",
+            "`#bp-add` a \"add >>\"",
+            "`#bp_dining_areas_shown_in_widget` select[select-multiple]",
+            "`#bp-remove` a \"<< remove\""
+          ]
+        },
+        {
+          "label": "Booking Duration Matrix",
+          "controls": []
+        },
+        {
+          "label": "API Integration",
+          "controls": [
+            "`input:has-text(\"\")` input[text] \"Label (e.g. Fever, FlamencoTickets)\"",
+            "`button:has-text(\"Create Key\")` button[button] \"Create Key\""
+          ]
+        },
+        {
+          "label": "Webhooks",
+          "controls": [
+            "`input:has-text(\"\")` input[url] \"https://example.com/webhooks\"",
+            "`button:has-text(\"Create\")` button[button] \"Create\"",
+            "`button:has-text(\"Created\")` button[button] \"Created\"",
+            "`button:has-text(\"Updated\")` button[button] \"Updated\"",
+            "`button:has-text(\"Confirmed\")` button[button] \"Confirmed\"",
+            "`button:has-text(\"Accepted\")` button[button] \"Accepted\"",
+            "`button:has-text(\"Cancelled\")` button[button] \"Cancelled\"",
+            "`button:has-text(\"Rejected\")` button[button] \"Rejected\"",
+            "`button:has-text(\"No-show\")` button[button] \"No-show\"",
+            "`button:has-text(\"Seated\")` button[button] \"Seated\""
+          ]
+        },
+        {
+          "label": "Pos Integration",
+          "controls": [
+            "`input:has-text(\"\")` input[text] \"Token will appear here\"",
+            "`button:has-text(\"Generate\")` button[button] \"Generate\""
+          ]
+        }
+      ],
+      "access": {
+        "Gold": "open",
+        "Freemium": "open",
+        "Silver": "open"
+      }
+    },
+    "/admin/restaurants/<slug>/tables": {
+      "path": "/admin/restaurants/<slug>/tables",
+      "area": "Table Management",
+      "checked": "2026-10-01",
+      "h1": "Table management",
+      "under": "",
+      "headings": [
+        "H1 \"Table management\""
+      ],
+      "tables": [
+        [
+          "Name ↑",
+          "Min. Covers ↕",
+          "Max. Covers ↕",
+          "Dining Area ↕",
+          "Group",
+          "Hide Table ↕",
+          "Actions"
+        ]
+      ],
+      "controls": [
+        "`button:has-text(\"Toggle sidebar\")` button[button] \"Toggle sidebar\"",
+        "`button:has-text(\"\")` button[button] \"Dismiss\"",
+        "`button:has-text(\"Tables · 189\")` button[button] \"Tables · 189\"",
+        "`button:has-text(\"Table Groups · 36\")` button[button] \"Table Groups · 36\"",
+        "`input:has-text(\"\")` input[text] \"Search by table name\"",
+        "`button:has-text(\"\")` button[button]",
+        "`button:has-text(\"All areas\")` button[button] \"All areas\"",
+        "`button:has-text(\"All visibility\")` button[button] \"All visibility\"",
+        "`button:has-text(\"Show active\")` button[button] \"Show active\""
+      ],
+      "tabs": [],
+      "access": {
+        "Gold": "open",
+        "Freemium": "open",
+        "Silver": "open"
+      }
+    },
+    "/admin/restaurants/<slug>/managers": {
+      "path": "/admin/restaurants/<slug>/managers",
+      "area": "Team Management",
+      "checked": "2026-10-01",
+      "h1": "",
+      "under": "",
+      "headings": [
+        "H3 \"List of Managers\""
+      ],
+      "tables": [
+        [
+          "Name",
+          "Phone",
+          "Roles",
+          "Emails",
+          "Staff Staff members listed here can add and edit bookings us",
+          "Active",
+          "Edit",
+          "Delete"
+        ]
+      ],
+      "controls": [
+        "`#add-member-btn` a \"Add Member\""
+      ],
+      "tabs": [],
+      "access": {
+        "Gold": "open",
+        "Freemium": "open",
+        "Silver": "open"
+      }
+    },
+    "/admin/restaurants/<slug>/restaurant-floor-map": {
+      "path": "/admin/restaurants/<slug>/restaurant-floor-map",
+      "area": "Floor Map",
+      "checked": "2026-10-01",
+      "h1": "",
+      "under": "",
+      "headings": [],
+      "tables": [
+        [
+          "Name",
+          "Service Hours",
+          "Edit"
+        ]
+      ],
+      "controls": [
+        "`a:has-text(\"Create\")` a \"Create\""
+      ],
+      "tabs": [],
+      "access": {
+        "Gold": "open",
+        "Freemium": "open",
+        "Silver": "open"
+      }
+    },
+    "/admin/restaurants": {
+      "path": "/admin/restaurants",
+      "area": "Restaurants",
+      "checked": "2026-10-01",
+      "h1": "",
+      "under": "",
+      "headings": [],
+      "tables": [
+        [
+          "ID",
+          "Restaurant",
+          "Active",
+          "Actions"
+        ]
+      ],
+      "controls": [],
+      "tabs": [],
+      "access": {
+        "Gold": "open",
+        "Freemium": "open",
+        "Silver": "open"
+      }
+    },
+    "/admin/support": {
+      "path": "/admin/support",
+      "area": "Support",
+      "checked": "2026-10-01",
+      "h1": "Help center",
+      "under": "",
+      "headings": [
+        "H1 \"Help center\"",
+        "H2 \"Book a session\"",
+        "H2 \"Talk to a human\"",
+        "H2 \"Visit our resource center\"",
+        "H2 \"Raise a support ticket\""
+      ],
+      "tables": [],
+      "controls": [
+        "`button:has-text(\"Chat with us\")` button[submit] \"Chat with us\"",
+        "`button:has-text(\"Copy\")` button[button] \"Copy\""
+      ],
+      "tabs": [],
+      "access": {
+        "Gold": "open",
+        "Freemium": "open",
+        "Silver": "open"
+      }
+    },
+    "/widget/<slug>": {
+      "path": "/widget/<slug>",
+      "area": "Public widget",
+      "checked": "2026-10-01",
+      "h1": "<restaurant>",
+      "under": "Test Description 1 Booking Date 2 Your details Step 1 / 2",
+      "headings": [
+        "H1 \"<restaurant>\""
+      ],
+      "tables": [],
+      "controls": [
+        "`button:has-text(\"English\")` button[button] \"English\"",
+        "`button:has-text(\"\")` button[button] \"Decrease\"",
+        "`#no_of_adults` input[number]",
+        "`button:has-text(\"\")` button[button] \"Increase\"",
+        "`#no_of_children` input[number]",
+        "`#step1-next-btn` button[button] \"Next\""
+      ],
+      "tabs": [],
+      "access": {
+        "Gold": "open",
+        "Freemium": "open",
+        "Silver": "open"
+      }
+    }
+  }
+}
