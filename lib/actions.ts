@@ -104,10 +104,22 @@ export async function fillStripeCard(page: Page, environment: string, kind = 'su
   if (/pk_live_/.test(html) || !/pk_test_/.test(html)) {
     throw new Error('Refusing to enter a card: this page does not use a Stripe test key (pk_test_).');
   }
-  const field = (selector: string) => page.frameLocator('iframe[name^="__privateStripeFrame"]').locator(selector).first();
-  await field('input[name="cardnumber"], input[name="number"]').fill(card.number);
-  await field('input[name="exp-date"], input[name="expiry"]').fill(card.expiry);
-  await field('input[name="cvc"]').fill(card.cvc);
-  const postal = field('input[name="postal"], input[name="postalCode"]');
-  if (await postal.count()) await postal.fill(card.postcode);
+  // One combined card element, or split elements (number / expiry / CVC each in its own frame).
+  const field = async (selector: string) => {
+    for (const frame of page.frames()) {
+      if (!frame.url().includes('js.stripe.com')) continue;
+      const input = frame.locator(selector).first();
+      if (await input.count().catch(() => 0)) return input;
+    }
+    return undefined;
+  };
+  const fill = async (selector: string, value: string, required = true) => {
+    const input = await field(selector);
+    if (!input) { if (required) throw new Error(`Stripe card field not found: ${selector}`); return; }
+    await input.fill(value);
+  };
+  await fill('input[name="cardnumber"], input[name="number"]', card.number);
+  await fill('input[name="exp-date"], input[name="expiry"]', card.expiry);
+  await fill('input[name="cvc"]', card.cvc);
+  await fill('input[name="postal"], input[name="postalCode"]', card.postcode, false);
 }

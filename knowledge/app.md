@@ -70,6 +70,29 @@ page up there first). What each plan should get: `plans.md`. How-to recipes: `pl
 - Marketplace toggles are `input#addon_<id>` (e.g. Email Branding = `addon_31` on Ben's Bistro). On a
   Gold restaurant the BI reports add-on reads "Included in your plan" (toggle disabled).
 
+## Billing, plan change and checkout (seen 2026-10-02 on neptune)
+
+- Billing page `billing-subscription`: "Your current plan" shows e.g. "Organise (Monthly) € ~~59.00~~ 29.50" with a green
+  discount label under it ("Discount Organise", "Discount Grow Campaign"). The button reads "Change Plan", or
+  "Contact Sales" once on Grow. There is no `<main>` element; read text from `body`.
+- A "Terms & Conditions" modal can cover any admin page. "Remind me later (N)" is enabled after a countdown of
+  about 5 s; use it (not "Agree") to avoid accepting terms for the account.
+- Plan picker `billing-subscription-switch-plan`: the "Annually" / "Monthly" toggle, then "Choose Organise / Grow /
+  Expand". Annual list prices are €59, €99 and €299 per month, billed annually.
+- Checkout is the wizard `billing-subscription/wizard` in 3 steps, each moved on by `#wizard_next`:
+  1. billing details (`input[name=billing_name|billing_email|billing_address|vat_number]`), pre-filled;
+  2. payment method: Stripe test-mode split card fields (number, expiry and CVC each in its own frame) plus
+     `#card-holder-name`. The card is saved to the account. Once a card is saved this step is still shown;
+  3. "Review & pay": `#discount_code_input` and `#apply_discount_btn`. A valid code adds a line
+     "<campaign> (<CODE>) <from> - <to>  - €x" and the note "50% discount applies for the first year - <CODE>"
+     with "Remove". Then `#terms_acceptance` and "Pay now" (`#wizard_next`) → "You're all set! Your
+     subscription to the <Plan> Plan is now active."
+- The first `#wizard_next` click can be missed straight after the page loads; wait about 2 s first.
+- Rate limit: applying codes / paying several times within minutes gives "Too many requests. Please wait a moment."
+  under the code field, or HTTP 429 on `wizard/step_3`. Wait a minute or two.
+- An upgrade from a discounted monthly plan shows two "Prorated credit - prepaid amount for 30 days" lines
+  (−€57.10 and +€28.55 for Organise at €59 discounted to €29.50).
+
 ## Known quirks (seen 2026-10-01, not ticketed)
 
 - Marketplace BI add-on card shows the raw key "market-place.Detailed Business Intelligence Reports".

@@ -25,7 +25,7 @@ and report what the app actually did. The app is a black box: never ask for sour
 Never turn a FAIL into BLOCKED because it is inconvenient. Relay BLOCKED actions verbatim.
 
 ## Hard rules
-Never: substitute a role, plan, restaurant, login or environment · change app data beyond what a case exercises, or without an undo · weaken an expectation or mark PASS without evidence · report against an unconfirmed restaurant · print, store or report credentials, cookies, seeds or codes · screenshot the 2FA page · touch a `QA_<ENV>_PRODUCTION=1` environment without `QA_ALLOW_PRODUCTION=1` · buy anything (paid add-on, plan change) without the QA engineer's yes · type card numbers on a hosted environment · use test data not from `config/test-data.json` or a stated override · invent app knowledge · write ticket ids into `knowledge/`.
+Never: substitute a role, plan, restaurant, login or environment · change app data beyond what a case exercises, or without an undo · weaken an expectation or mark PASS without evidence · report against an unconfirmed restaurant · print, store or report credentials, cookies, seeds or codes · screenshot the 2FA page · touch a `QA_<ENV>_PRODUCTION=1` environment without `QA_ALLOW_PRODUCTION=1` · buy anything (paid add-on, plan change) without the QA engineer's yes · type a card other than a `config/test-data.json` Stripe test card, or any card outside `fillStripeCard()` (test key `pk_test_` only) · use test data not from `config/test-data.json` or a stated override · invent app knowledge · write ticket ids into `knowledge/`.
 
 ## Economy
 Typical run: look pages up in `knowledge/sitemap.md` → (probe only missing pages, all in one call) → write the

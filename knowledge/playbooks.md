@@ -88,8 +88,9 @@ and register an undo that restores them.
 `billing-subscription-switch-plan` lists the plans ("Basic Business Reports" on Organise, "Detailed
 Business Intelligence Reports" on Grow, add-on fees). A plan change is a purchase: it needs the QA
 engineer's approval in the run plan. If a card form appears, `fillStripeCard()` only fills Stripe's
-test card on a Stripe test-mode page (`pk_test_`). Claude does not type card numbers on a hosted environment such as devrms.tableo.com: that step is left to the QA
-engineer (run with `QA_WATCH=1`) unless a test card is already saved on the restaurant.
+test card on a Stripe test-mode page (`pk_test_`). On hosted developer environments (e.g. neptune.tabdevx.com)
+use the `success` card from `config/test-data.json` via `fillStripeCard(page, env, 'success')`; it refuses on
+production-protected environments and on pages without a Stripe test key. Never type any other card.
 
 ## Onboarding a new restaurant (not automatable)
 

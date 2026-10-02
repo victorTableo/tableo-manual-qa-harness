@@ -16,3 +16,5 @@ ticket; `artifacts/` records what was tested.
 - 2026-10-01: FAIL "Actual" now shows the check's own message instead of raw matcher output → `lib/checklist.ts`
 - 2026-10-01: layout judged at desktop width (responsive wrapping is not a defect); bookings filter ids → `knowledge/playbooks.md`, `knowledge/app.md`
 - 2026-10-01: knowledge is ticket-free; pages and per-plan access come from `npm run crawl`; pricing entitlements recorded → `knowledge/sitemap.md`, `knowledge/plans.md`
+- 2026-10-02: hosted dev envs with a Stripe test key may take the test-data success card via `fillStripeCard` → `knowledge/playbooks.md`, `CLAUDE.md`
+- 2026-10-02: billing wizard steps, discount-code field, T&C modal, checkout rate limit → `knowledge/app.md`; split Stripe card fields → `lib/actions.ts`
